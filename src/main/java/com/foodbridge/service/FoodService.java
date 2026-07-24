@@ -38,4 +38,8 @@ public class FoodService {
         return foodRepository.findAll();
     }
 
+    public List<Food> getMyDonations(String donorEmail) {
+        return foodRepository.findByDonorEmail(donorEmail);
+    }
+
 }

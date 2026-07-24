@@ -32,4 +32,11 @@ public class FoodController {
 
         return ResponseEntity.ok(foodService.getAllFood());
     }
+
+    @GetMapping("/my-donations")
+    public ResponseEntity<List<Food>> getMyDonations(
+            @RequestParam String email) {
+
+        return ResponseEntity.ok(foodService.getMyDonations(email));
+    }
 }
